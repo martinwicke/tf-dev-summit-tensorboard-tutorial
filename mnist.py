@@ -150,7 +150,7 @@ def main():
         hparam = make_hparam_string(learning_rate, use_two_fc, use_two_conv)
         print('Starting run for %s' % hparam)
 
-      # Actually run with the new settings
+        # Actually run with the new settings
         mnist_model(learning_rate, use_two_fc, use_two_conv, hparam)
   print('Done training!')
   print('Run `tensorboard --logdir=/tmp/mnist_tutorial to see the results.')
