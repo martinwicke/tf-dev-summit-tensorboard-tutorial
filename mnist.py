@@ -58,7 +58,7 @@ def fc_layer(input, size_in, size_out, name="fc"):
     return act
 
 
-def mnist_model(learning_rate, use_two_conv, use_two_fc, hparam):
+def mnist_model(learning_rate, use_two_fc, use_two_conv, hparam):
   tf.reset_default_graph()
   sess = tf.Session()
 
