@@ -153,7 +153,7 @@ def main():
         # Actually run with the new settings
         mnist_model(learning_rate, use_two_fc, use_two_conv, hparam)
   print('Done training!')
-  print('Run `tensorboard --logdir=/tmp/mnist_tutorial` to see the results.')
+  print('Run `tensorboard --logdir=%s` to see the results.' % LOGDIR)
   print('Running on mac? If you want to get rid of the dialogue asking to give '
         'network permissions to TensorBoard, you can provide this flag: '
         '--host=localhost')
