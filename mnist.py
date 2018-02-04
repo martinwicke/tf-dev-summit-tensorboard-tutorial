@@ -72,8 +72,7 @@ def mnist_model(learning_rate, use_two_fc, use_two_conv, hparam):
     conv1 = conv_layer(x_image, 1, 32, "conv1")
     conv_out = conv_layer(conv1, 32, 64, "conv2")
   else:
-    conv1 = conv_layer(x_image, 1, 64, "conv")
-    conv_out = tf.nn.max_pool(conv1, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding="SAME")
+    conv_out = conv_layer(x_image, 1, 64, "conv")
 
   flattened = tf.reshape(conv_out, [-1, 7 * 7 * 64])
 
