@@ -72,7 +72,7 @@ def mnist_model(learning_rate, use_two_fc, use_two_conv, hparam):
     conv1 = conv_layer(x_image, 1, 32, "conv1")
     conv_out = conv_layer(conv1, 32, 64, "conv2")
   else:
-    conv_out = conv_layer(x_image, 1, 64, "conv")
+    conv_out = conv_layer(x_image, 1, 16, "conv")
 
   flattened = tf.reshape(conv_out, [-1, 7 * 7 * 64])
 
