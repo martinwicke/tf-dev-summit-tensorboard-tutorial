@@ -83,7 +83,7 @@ def mnist_model(learning_rate, use_two_fc, use_two_conv, hparam):
     embedding_input = relu
     tf.summary.histogram("fc1/relu", relu)
     embedding_size = 1024
-    logits = fc_layer(fc1, 1024, 10, "fc2")
+    logits = fc_layer(relu, 1024, 10, "fc2")
   else:
     embedding_input = flattened
     embedding_size = 7*7*64
